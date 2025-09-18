@@ -1,0 +1,152 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fdf6f0;
+  color: #333333;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr 2fr auto;
+}
+
+:root {
+  --background: #fdf6f0;
+  --coffee-brown: #6f4e37;
+  /* --lightbrown: */
+  --orange-accent: #ff6f3c;
+  --orange-hover: #e05d2d;
+  --darkgray-text: #333333;
+  --white: white;
+}
+
+/* Header */
+header {
+  min-height: 50px;
+  background-color: var(--coffee-brown);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  .logo {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+  } */
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 0;
+  }
+
+  nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    color: var(--orange-accent);
+  }
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #c08552, #6f4e37);
+  color: var(--white);
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    background-color: var(--orange-accent);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+
+  .btn:hover {
+    background-color: var(--orange-hover);
+  }
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+
+  .card {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .card h2 {
+    font-family: "Poppins", sans-serif;
+    color: var(--coffee-brown);
+  }
+}
+
+/* Footer */
+footer {
+  min-height: 50px;
+  background-color: var(--coffee-brown);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsiv */
+@media (min-width: 576px) {
+  .features {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 576px) {
+  header {
+    nav ul {
+      /* list-style: none; */
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      /* gap: 1.5rem;
+			margin: 0; */
+    }
+  }
+}
+
+/* nav att fixa - Responsiv */
