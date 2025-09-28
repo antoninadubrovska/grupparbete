@@ -249,3 +249,23 @@ footer {
     color: var(--orange-hover);
   }
 }
+
+.about-section {
+  padding: 3rem 2rem;
+  text-align: center;
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    color: var(--coffee-brown);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+} 
