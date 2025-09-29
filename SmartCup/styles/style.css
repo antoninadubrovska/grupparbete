@@ -1,0 +1,379 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+:root {
+  --background: #fdf6f0;
+  --background-orange: #c08552;
+  --coffee-brown: #6f4e37;
+  --orange-accent: #ff6f3c;
+  --orange-hover: #e05d2d;
+  --darkgray-text: #333333;
+  --white: white;
+}
+
+/* Header */
+header {
+  min-height: 50px;
+  background-color: var(--coffee-brown);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.2rem;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    img {
+      padding: 0.2em 0.4em;
+    }
+  }
+
+  .separator {
+    flex-grow: 1;
+    flex-basis: 4em;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0.6em 1.8em;
+  }
+
+  nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    color: var(--orange-accent);
+  }
+}
+
+/* Responsiv header */
+
+@media (max-width:684px) {
+	 header {
+		.separator {
+			display: none;
+		}
+		.logo p{
+			display: none;
+		}
+		.logo img {
+			padding-left: 2rem;
+		}
+		nav ul {
+			padding-left: 0.4rem;
+		}
+	 }
+}
+
+@media (max-width:440px) {
+	header {
+		.logo img{
+			display: none;
+		}
+		.logo p {
+			display: none;
+		}
+		nav ul {
+			padding-left: 2rem;
+			flex-direction: column;
+			gap:0.4rem;
+		}
+
+	}
+
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #c08552, #6f4e37);
+  color: var(--white);
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* .bth for both home and product page */
+.btn {
+  background-color: var(--orange-accent);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: var(--orange-hover);
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+
+  .card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 300px;
+    text-align: center;
+  }
+  .card h2 {
+    font-family: "Poppins", sans-serif;
+    color: var(--coffee-brown);
+  }
+
+  img {
+	border-radius: 8px;
+  }
+  .card:hover {
+	transform: scale(1.04);
+  }
+}
+
+/* Responsiv */
+@media (min-width: 576px) {
+  .features {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+/* Footer */
+footer {
+  min-height: 50px;
+  background-color: var(--coffee-brown);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-top: 0;
+}
+
+
+
+/* Product Hero */
+.product-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  padding: 3rem 2rem 0 2rem;
+  background-color: var(--background);
+
+  .product-image img {
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-image:hover {
+	transform: scale(1.04);
+  }
+
+  .product-intro h1 {
+    font-family: "Poppins", sans-serif;
+    color: var(--coffee-brown);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .product-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Product Details */
+.product-details {
+  padding: 3rem 2rem;
+  background-color: var(--background-orange);
+  color: var(--white);
+  text-align: center;
+  margin-top: 1.5rem;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: left;
+  }
+
+  li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  li:hover {
+    color: var(--darkgray-text);
+  }
+}
+
+
+/* Gallery Section */
+.gallery {
+  padding: 3rem 2rem;
+  text-align: center;
+
+  h2 {
+	font-family: "Poppins", sans-serif;
+	font-size: 2rem;
+	color: var(--coffee-brown);
+	margin-bottom: 2.6rem;
+  }
+}
+
+.container-gallery {
+	width: 80%;
+	max-width: 1224px;
+	/* margin: 0 auto; */
+	padding: 40px 0;
+	text-align: center;
+	margin: auto;
+	h2 {
+		font-family: "Poppins", sans-serif;
+		font-size: 2rem;
+		color: var(--coffee-brown);
+		margin-bottom: 2.6rem;
+	  }
+
+	  .photo-gallery {
+		display: flex;
+		justify-content: center;
+  		align-items: flex-start;
+		gap: 20px;
+	  }
+
+	  .column {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	  }
+
+	  .photo img {
+		width: 100%;
+		height: 100%;
+		border-radius: 8px;
+		object-fit: cover;
+	  }
+
+	  img:hover {
+		transform: scale(1.04);
+	  }
+}
+
+@media (max-width:576px) {
+	.photo-gallery {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.column {
+		width: 90%;
+		margin: 0 auto;
+		max-width: 350px;
+	  }
+}
+
+
+/* Testimonials */
+.testimonials {
+  padding: 3rem 2rem;
+  text-align: center;
+
+  cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+
+  blockquote {
+    font-style: italic;
+    margin: 1.5rem auto;
+    max-width: 600px;
+  }
+
+  blockquote:hover {
+    color: var(--orange-hover);
+  }
+}
+
+.about-section {
+  padding: 3rem 2rem;
+  text-align: center;
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    color: var(--coffee-brown);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.about-us {
+	padding: 3rem 2rem;
+	background-color: var(--background-orange);
+	color: var(--white);
+	text-align: center;
+	margin-top: 1.5rem;
+
+  p {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    /* text-align: left; */
+	font-size: 1.1rem;
+	padding: 0.5rem 0;
+  }
+  p:hover {
+    color: var(--darkgray-text);
+  }
+
+}
+
+/* content is coming - contact page */
