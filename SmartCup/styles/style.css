@@ -96,9 +96,7 @@ header {
 			flex-direction: column;
 			gap:0.4rem;
 		}
-
 	}
-
 }
 
 /* Hero Section */
@@ -183,8 +181,6 @@ footer {
   margin-top: 0;
 }
 
-
-
 /* Product Hero */
 .product-hero {
   display: flex;
@@ -245,7 +241,6 @@ footer {
     color: var(--darkgray-text);
   }
 }
-
 
 /* Gallery Section */
 .gallery {
@@ -376,4 +371,13 @@ footer {
 
 }
 
-/* content is coming - contact page */
+.coming {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    p {
+      font-size: 1.6rem;
+    }
+  }
