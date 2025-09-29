@@ -182,6 +182,7 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+  margin-top: 0;
 }
 
 
@@ -354,6 +355,27 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.about-us {
+	padding: 3rem 2rem;
+	background-color: var(--background-orange);
+	color: var(--white);
+	text-align: center;
+	margin-top: 1.5rem;
+
+  p {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    /* text-align: left; */
+	font-size: 1.1rem;
+	padding: 0.5rem 0;
+  }
+  p:hover {
+    color: var(--darkgray-text);
+  }
+
 }
 
 /* content is coming - contact page */
